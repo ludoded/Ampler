@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pFv-Od-CAQ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History-->
+        <scene sceneID="gWE-dP-Vwb">
+            <objects>
+                <viewController id="JmU-Vg-Y7s" customClass="HistoryViewController" customModule="Ampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fka-hn-tXO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ogd-ih-dcf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ogd-ih-dcf" firstAttribute="leading" secondItem="XVD-dC-AZH" secondAttribute="leading" id="5FU-Xj-cAh"/>
+                            <constraint firstItem="Ogd-ih-dcf" firstAttribute="top" secondItem="XVD-dC-AZH" secondAttribute="top" id="d60-OX-1ti"/>
+                            <constraint firstItem="XVD-dC-AZH" firstAttribute="trailing" secondItem="Ogd-ih-dcf" secondAttribute="trailing" id="neS-5w-eIq"/>
+                            <constraint firstItem="XVD-dC-AZH" firstAttribute="bottom" secondItem="Ogd-ih-dcf" secondAttribute="bottom" id="t5E-Na-dnO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XVD-dC-AZH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="History" id="Pcj-oM-KLQ"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ogd-ih-dcf" id="VgH-OL-Iuo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ne-7n-w1B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602.8985507246377" y="-34.151785714285715"/>
+        </scene>
+        <!--History Detail View Controller-->
+        <scene sceneID="UH5-DP-eVH">
+            <objects>
+                <viewController storyboardIdentifier="HistoryDetailViewController" id="HQQ-eJ-zsi" customClass="HistoryDetailViewController" customModule="Ampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vt1-dg-RBD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="34f-7E-div">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <outlet property="delegate" destination="HQQ-eJ-zsi" id="I4F-P0-yrm"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="34f-7E-div" firstAttribute="leading" secondItem="yYW-ir-cEs" secondAttribute="leading" id="1vj-3k-RW5"/>
+                            <constraint firstItem="yYW-ir-cEs" firstAttribute="bottom" secondItem="34f-7E-div" secondAttribute="bottom" id="JSK-M4-5XU"/>
+                            <constraint firstItem="34f-7E-div" firstAttribute="top" secondItem="yYW-ir-cEs" secondAttribute="top" id="rCq-HR-zpS"/>
+                            <constraint firstItem="yYW-ir-cEs" firstAttribute="trailing" secondItem="34f-7E-div" secondAttribute="trailing" id="w9y-Km-6jg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yYW-ir-cEs"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="34f-7E-div" id="Ssf-NR-iJi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CpL-LD-Wn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2497" y="-34"/>
+        </scene>
+        <!--Trip-->
+        <scene sceneID="RhO-br-zSB">
+            <objects>
+                <viewController id="Ggs-yL-XDn" customClass="TripViewController" customModule="Ampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MhR-wd-42W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eFG-WK-s9X">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFV-Wz-WmJ">
+                                <rect key="frame" x="132" y="713" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.34509803919999998" green="0.59607843140000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="M8I-sF-EEm"/>
+                                    <constraint firstAttribute="width" constant="150" id="sHc-2m-jFs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Start Trip">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleTripState:" destination="Ggs-yL-XDn" eventType="touchUpInside" id="jna-aV-j4g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h5M-Zy-8cb" firstAttribute="trailing" secondItem="eFG-WK-s9X" secondAttribute="trailing" id="Co9-3h-3sF"/>
+                            <constraint firstItem="FFV-Wz-WmJ" firstAttribute="centerX" secondItem="MhR-wd-42W" secondAttribute="centerX" id="FQN-2k-UiV"/>
+                            <constraint firstItem="eFG-WK-s9X" firstAttribute="leading" secondItem="h5M-Zy-8cb" secondAttribute="leading" id="Jm3-Cj-LNm"/>
+                            <constraint firstItem="eFG-WK-s9X" firstAttribute="top" secondItem="h5M-Zy-8cb" secondAttribute="top" id="Zt8-cH-iwO"/>
+                            <constraint firstItem="h5M-Zy-8cb" firstAttribute="bottom" secondItem="FFV-Wz-WmJ" secondAttribute="bottom" constant="50" id="bLU-Fc-9p9"/>
+                            <constraint firstItem="h5M-Zy-8cb" firstAttribute="bottom" secondItem="eFG-WK-s9X" secondAttribute="bottom" id="pAS-f8-5o5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h5M-Zy-8cb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Trip" image="trip" id="WTp-p3-Arf"/>
+                    <connections>
+                        <outlet property="mapView" destination="eFG-WK-s9X" id="EF2-hq-jqz"/>
+                        <outlet property="startTripButton" destination="FFV-Wz-WmJ" id="ivA-CR-9Vx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QKV-00-05R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="-682"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hBq-OQ-0WN">
+            <objects>
+                <tabBarController id="pFv-Od-CAQ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lu5-0K-7he">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ggs-yL-XDn" kind="relationship" relationship="viewControllers" id="DA2-B1-ufM"/>
+                        <segue destination="3qu-53-YAd" kind="relationship" relationship="viewControllers" id="KVl-Ec-D0p"/>
+                        <segue destination="0Af-1I-cRw" kind="relationship" relationship="viewControllers" id="GDS-uD-KOi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbo-aB-1Cy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-225" y="-358"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="ey2-ZW-kg4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3qu-53-YAd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="history" id="2UC-6p-IwO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xvi-vf-xC7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JmU-Vg-Y7s" kind="relationship" relationship="rootViewController" id="jrk-U2-Nbw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IQ2-rY-8r5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692.75362318840587" y="-34.151785714285715"/>
+        </scene>
+        <!--Charts-->
+        <scene sceneID="U8l-Ph-5la">
+            <objects>
+                <viewController id="0Af-1I-cRw" customClass="ChartsViewController" customModule="Ampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m8p-Et-Fez">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8o4-FT-gxQ">
+                                <rect key="frame" x="127.5" y="81" width="159" height="29"/>
+                                <segments>
+                                    <segment title="Kilometers"/>
+                                    <segment title="Miles"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedToggle:" destination="0Af-1I-cRw" eventType="valueChanged" id="hqL-fV-ilZ"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVf-qy-CDS" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="139" width="374" height="654"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8o4-FT-gxQ" firstAttribute="centerX" secondItem="m8p-Et-Fez" secondAttribute="centerX" id="9e6-QP-SWK"/>
+                            <constraint firstItem="t5q-5H-kC7" firstAttribute="bottom" secondItem="kVf-qy-CDS" secondAttribute="bottom" constant="20" id="JK6-Zm-OVb"/>
+                            <constraint firstItem="t5q-5H-kC7" firstAttribute="trailing" secondItem="kVf-qy-CDS" secondAttribute="trailing" constant="20" id="QLG-KG-1Da"/>
+                            <constraint firstItem="kVf-qy-CDS" firstAttribute="top" secondItem="8o4-FT-gxQ" secondAttribute="bottom" constant="30" id="QeZ-V1-NKO"/>
+                            <constraint firstItem="kVf-qy-CDS" firstAttribute="leading" secondItem="t5q-5H-kC7" secondAttribute="leading" constant="20" id="XHc-TQ-8KR"/>
+                            <constraint firstItem="8o4-FT-gxQ" firstAttribute="top" secondItem="t5q-5H-kC7" secondAttribute="top" constant="37" id="XRv-Ns-Ann"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="t5q-5H-kC7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Charts" image="charts" id="VSZ-4O-uMG"/>
+                    <connections>
+                        <outlet property="chartView" destination="kVf-qy-CDS" id="09m-Au-yMZ"/>
+                        <outlet property="segmentedControl" destination="8o4-FT-gxQ" id="rl4-dT-pVD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mcB-Pl-qLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="636"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="charts" width="25" height="25"/>
+        <image name="history" width="25" height="25"/>
+        <image name="trip" width="25" height="25"/>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_AmplerTests {
+  umbrella header "Pods-AmplerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

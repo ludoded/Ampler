@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HistoryCell" rowHeight="71" id="gSl-Uy-c4b" customClass="HistoryCell" customModule="Ampler" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gSl-Uy-c4b" id="xy0-tF-BG5">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="70.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mwN-PE-3yr">
+                        <rect key="frame" x="20" y="8" width="336" height="54.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgk-od-NlG">
+                                <rect key="frame" x="0.0" y="0.0" width="336" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1p-rj-AKp">
+                                <rect key="frame" x="0.0" y="34" width="336" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mwN-PE-3yr" firstAttribute="top" secondItem="xy0-tF-BG5" secondAttribute="top" constant="8" id="7Rg-2t-X0Z"/>
+                    <constraint firstItem="mwN-PE-3yr" firstAttribute="leading" secondItem="xy0-tF-BG5" secondAttribute="leading" constant="20" id="GGs-qk-xJC"/>
+                    <constraint firstAttribute="trailing" secondItem="mwN-PE-3yr" secondAttribute="trailing" constant="20" id="I3C-Yj-4Xc"/>
+                    <constraint firstAttribute="bottom" secondItem="mwN-PE-3yr" secondAttribute="bottom" constant="8" id="Mvn-j8-4Er"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="end" destination="U1p-rj-AKp" id="mtz-Ub-Jgd"/>
+                <outlet property="start" destination="hgk-od-NlG" id="gKa-vA-iAn"/>
+            </connections>
+            <point key="canvasLocation" x="-20.289855072463769" y="81.361607142857139"/>
+        </tableViewCell>
+    </objects>
+</document>

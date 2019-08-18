@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18G84" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Coordinate" representedClassName=".Coordinate" syncable="YES">
+        <attribute name="index" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="coordinates" inverseEntity="Trip" syncable="YES"/>
+    </entity>
+    <entity name="Trip" representedClassName=".Trip" syncable="YES">
+        <attribute name="endDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="startDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="coordinates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Coordinate" inverseName="trip" inverseEntity="Coordinate" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Trip" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Coordinate" positionX="-54" positionY="9" width="128" height="105"/>
+    </elements>
+</model>
